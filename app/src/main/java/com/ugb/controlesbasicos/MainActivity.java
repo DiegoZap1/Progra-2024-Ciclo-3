@@ -25,40 +25,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tempVal = findViewById(R.id.lblSensorProximidad);
+        activarSensorProximidad();
     }
     @Override
-    protected void onResume(){
+    protected void onResume() {
         iniciar();
         super.onResume();
     }
     @Override
-    protected void onPause(){
+    protected void onPause() {
         detener();
         super.onPause();
     }
     private void activarSensorProximidad(){
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        if(sensor == null){
-            tempVal.setText("Tu telefono no tiene sensor de proximidad");
+        if(sensor==null){
+            tempVal.setText("Tu telefono NO tiene sensor de proximidad");
             finish();
         }
         sensorEventListener = new SensorEventListener() {
             @Override
-            public void onSensorChanged(SensorEvent event) {
-                double valor = SensorEvent.values[0];
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                double valor = sensorEvent.values[0];
                 tempVal.setText("Proximidad: "+ valor);
-                if(valor <= 4){
+                if( valor<=4 ){
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                } else if (valor <= 8) {
+                } else if (valor<=8) {
                     getWindow().getDecorView().setBackgroundColor(Color.RED);
                 }else{
                     getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
                 }
             }
-
             @Override
-            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            public void onAccuracyChanged(Sensor sensor, int i) {
 
             }
         };

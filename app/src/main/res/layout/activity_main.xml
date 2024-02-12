@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/lblSensorProximidad"
-        android:text="Sensor proximidad: ?"
+        android:text="Sensor de Proximidad: ?"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:textColor="@color/black"/>
+
 </RelativeLayout>
