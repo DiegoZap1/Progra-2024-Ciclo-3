@@ -1,9 +1,60 @@
 <resources>
-    <string name="app_name">Calculadora basica</string>
-    <string-array name="spnopciones">
-        <item>Suma</item>
-        <item>Resta</item>
-        <item>Multiplicacion</item>
-        <item>Division</item>
+    <string name="app_name">Conversores</string>
+    <string-array name="spnLongitud">
+        <item>Metro</item>
+        <item>Cm</item>
+        <item>Pulgada</item>
+        <item>Pie</item>
+        <item>Vara</item>
+        <item>Yarda</item>
+        <item>Km</item>
+        <item>Milla</item>
+    </string-array>
+    <string-array name="spnMoneda">
+        <item>Dolar (USD)</item>
+        <item>Euro (EUR)</item>
+        <item>Yen (JPY)</item>
+        <item>Libra Esterlina (GBP)</item>
+        <item>Peso Mexicano (MXN)</item>
+        <item>Peso Argentino (ARS)</item>
+        <item>Won Coreano (KRW)</item>
+        <item>Yuan Chino (CNY)</item>
+    </string-array>
+    <string-array name="spnAlmacenamiento">
+        <item>Bit</item>
+        <item>Byte</item>
+        <item>KiloByte</item>
+        <item>MegaByte</item>
+        <item>GigaByte</item>
+        <item>TeraByte</item>
+        <item>PetaByte</item>
+    </string-array>
+    <string-array name="spnPeso">
+        <item>Gramo</item>
+        <item>Miligramo</item>
+        <item>Tonelada</item>
+        <item>Kilogramo</item>
+        <item>Libra</item>
+        <item>Onza</item>
+    </string-array>
+    <string-array name="spnTiempo">
+        <item>Milisegundo</item>
+        <item>Segundo</item>
+        <item>Minuto</item>
+        <item>Hora</item>
+        <item>Dia</item>
+        <item>Semana</item>
+        <item>Mes</item>
+        <item>Año</item>
+    </string-array>
+    <string-array name="spnVolumen">
+        <item>Litro</item>
+        <item>Mililitro</item>
+        <item>Galón</item>
+        <item>Taza</item>
+        <item>Onza</item>
+        <item>Cucharada</item>
+        <item>Pie Cubico</item>
+        <item>Pulgada cubica</item>
     </string-array>
 </resources>
