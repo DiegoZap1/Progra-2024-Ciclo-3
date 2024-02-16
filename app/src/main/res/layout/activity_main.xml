@@ -6,114 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <TextView
-       android:id="@+id/lblnum1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Num 1:"
-       android:layout_marginLeft="20dp"
-       android:layout_marginTop="40dp"/>
-
-    <TextView
-        android:id="@+id/lblnum2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtnum1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="25dp"
-        android:text="Num 2:" />
-
-    <EditText
-        android:id="@+id/txtnum1"
+    <TabHost
+        android:id="@+id/tbhParcial"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblnum1"
-        android:layout_marginTop="-30dp"
-        android:layout_marginLeft="80dp"/>
+        android:layout_height="match_parent">
 
- <EditText
-     android:id="@+id/txtnum2"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_below="@+id/txtnum1"
-     android:layout_marginLeft="80dp"
-     android:layout_marginTop="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Spinner
-        android:id="@+id/spnOpciones"
-        android:entries="@array/spnopciones"
-        android:layout_below="@+id/txtnum2"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="180dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <RadioGroup
-        android:id="@+id/optOpciones"
-        android:layout_below="@+id/txtnum2"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:id="@+id/optSuma"
-            android:text="SUMA"
-            android:checked="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optResta"
-            android:text="RESTA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optMulplicacion"
-            android:text="MULTIPLICACION"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optDivision"
-            android:text="DIVISION"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optPorcentaje"
-            android:text="PORCENTAJE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optExponente"
-            android:text="EXPONENTE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optFactorial"
-            android:text="FACTORIAL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <RadioButton
-            android:id="@+id/optRaiz"
-            android:text="RAIZ"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </RadioGroup>
-    <Button
-        android:id="@+id/btnCalcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/optOpciones"
-        android:layout_marginTop="40dp"
-        android:text="Calcular"/>
+                <RelativeLayout
+                    android:id="@+id/tabTarifaxmetros"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/lblrespuesta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCalcular"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:text="Respuesta: ?" />
+                    <TextView
+                        android:id="@+id/lblDeLongitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="DE:" />
 
+                    <TextView
+                        android:id="@+id/lblALongitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="120dp"
+                        android:text="A:" />
 
+                    <Spinner
+                        android:id="@+id/spnDeLongitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="60dp"
+                        android:entries="@array/spnLongitud" />
+
+                    <Spinner
+                        android:id="@+id/spnALongitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="120dp"
+                        android:entries="@array/spnLongitud"/>
+
+                    <EditText
+                        android:id="@+id/txtCantidadLongitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spnALongitud"
+                        android:layout_marginTop="40dp"
+                        android:hint="Cantidad a convertir" />
+
+                    <Button
+                        android:id="@+id/btnCalcularLongitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtCantidadLongitud"
+                        android:layout_marginTop="40dp"
+                        android:text="CONVERTIR" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/tabDeMonedas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblDeMonedas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="60dp"
+                            android:text="DE:" />
+
+                        <TextView
+                            android:id="@+id/lblMonedas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="120dp"
+                            android:text="A:" />
+
+                        <Spinner
+                            android:id="@+id/spndeMonedas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="60dp"
+                            android:entries="@array/spnMoneda" />
+
+                        <Spinner
+                            android:id="@+id/spnAmonedas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="120dp"
+                            android:entries="@array/spnMoneda"/>
+
+                        <EditText
+                            android:id="@+id/txtCantidadMonedas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spnAmonedas"
+                            android:layout_marginTop="40dp"
+                            android:hint="Cantidad a convertir" />
+
+                        <Button
+                            android:id="@+id/btnCalcularMoneda"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtCantidadMonedas"
+                            android:layout_marginTop="40dp"
+                            android:text="CONVERTIR" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </RelativeLayout>
