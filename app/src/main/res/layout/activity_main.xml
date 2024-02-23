@@ -27,58 +27,35 @@
                 android:layout_height="match_parent">
 
                 <RelativeLayout
-                    android:id="@+id/tabTarifaxmetros"
+                    android:id="@+id/tabTarifaAgua"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/lblDeLongitud"
+                        android:id="@+id/lblDeTarifa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="60dp"
-                        android:text="DE:" />
-
-                    <TextView
-                        android:id="@+id/lblALongitud"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="120dp"
-                        android:text="A:" />
-
-                    <Spinner
-                        android:id="@+id/spnDeLongitud"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginTop="60dp"
-                        android:entries="@array/spnLongitud" />
-
-                    <Spinner
-                        android:id="@+id/spnALongitud"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginTop="120dp"
-                        android:entries="@array/spnLongitud"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="63dp"
+                        android:text="METROS:" />
 
                     <EditText
-                        android:id="@+id/txtCantidadLongitud"
+                        android:id="@+id/txtCantidadAgua"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/spnALongitud"
-                        android:layout_marginTop="40dp"
-                        android:hint="Cantidad a convertir" />
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="50dp"
+                        android:hint="Cantidad" />
 
                     <Button
-                        android:id="@+id/btnCalcularLongitud"
+                        android:id="@+id/btnCalcularAgua"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtCantidadLongitud"
+                        android:layout_below="@+id/txtCantidadAgua"
                         android:layout_marginTop="40dp"
-                        android:text="CONVERTIR" />
+                        android:text="Calcular" />
+
                 </RelativeLayout>
 
                 <LinearLayout
@@ -93,7 +70,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/lblDeMonedas"
+                            android:id="@+id/lblDeArea"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
@@ -101,7 +78,7 @@
                             android:text="DE:" />
 
                         <TextView
-                            android:id="@+id/lblMonedas"
+                            android:id="@+id/lblAArea"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
@@ -109,34 +86,34 @@
                             android:text="A:" />
 
                         <Spinner
-                            android:id="@+id/spndeMonedas"
+                            android:id="@+id/spndeArea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="60dp"
                             android:layout_marginTop="60dp"
-                            android:entries="@array/spnMoneda" />
+                            android:entries="@array/spnArea" />
 
                         <Spinner
-                            android:id="@+id/spnAmonedas"
+                            android:id="@+id/spnAArea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="60dp"
                             android:layout_marginTop="120dp"
-                            android:entries="@array/spnMoneda"/>
+                            android:entries="@array/spnArea"/>
 
                         <EditText
-                            android:id="@+id/txtCantidadMonedas"
+                            android:id="@+id/txtCantidadArea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/spnAmonedas"
+                            android:layout_below="@+id/spnAArea"
                             android:layout_marginTop="40dp"
                             android:hint="Cantidad a convertir" />
 
                         <Button
-                            android:id="@+id/btnCalcularMoneda"
+                            android:id="@+id/btnCalcularArea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/txtCantidadMonedas"
+                            android:layout_below="@+id/txtCantidadArea"
                             android:layout_marginTop="40dp"
                             android:text="CONVERTIR" />
                     </RelativeLayout>
