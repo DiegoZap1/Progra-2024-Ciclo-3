@@ -1,3 +1,9 @@
 <resources>
+    <string name="app_name">WhatsApp 2</string>
+
+    <string-array name="spnColores">
+        <item>Claro</item>
+        <item>Oscuro</item>
+    </string-array>
 
 </resources>

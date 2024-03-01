@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtview1"
+        android:text="Ajustes"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txvcolores"
+        android:text="Colores"
+        android:textAlignment="center"
+        android:layout_marginTop="160dp"
+        android:layout_below="@+id/txtview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spnColores"
+        android:layout_width="328dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/txvcolores"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:entries="@array/spnColores"
+        android:scrollbarSize="50dp" />
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:text="Cerrar Sesion"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_below="@id/spnColores"
+        android:background="@drawable/boton_redondo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
