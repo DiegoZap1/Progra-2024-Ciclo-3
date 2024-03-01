@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.ugb.controlesbasicos"
-        minSdk 22
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -25,6 +25,13 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res', 'src\\main\\res\\menu'
+            }
+        }
     }
 }
 
