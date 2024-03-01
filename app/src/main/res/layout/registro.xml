@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtview3"
+        android:text="Registro"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/txtRegistroEmail"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:hint="Email"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="294dp"/>
+
+    <EditText
+        android:id="@+id/txtRegistroContraseña"
+        android:layout_width="298dp"
+        android:layout_height="49dp"
+        android:hint="Contraseña"
+        android:layout_marginLeft="54dp"
+        android:layout_below="@+id/txtRegistroEmail"/>
+
+    <Button
+        android:id="@+id/btnRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtRegistroContraseña"
+        android:background="@drawable/boton_redondo"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/reverseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="340dp"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</RelativeLayout>
